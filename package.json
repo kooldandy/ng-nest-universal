@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "prodserve:ssr",
+    "start": "npm run prodserve:ssr",
     "build": "npm run prodbuild:ssr",
     "test": "ng test",
     "lint": "ng lint",
