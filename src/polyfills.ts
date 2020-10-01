@@ -57,6 +57,12 @@
  */
 import 'zone.js/dist/zone';  // Included with Angular CLI.
 
+// workaround for process because process is not defined for angular which is used in environment file
+(window as any).process = {
+    env: { DEBUG: undefined },
+    cwd: () => { },
+    resolve: () => { },
+};
 
 /***************************************************************************************************
  * APPLICATION IMPORTS

@@ -9,10 +9,15 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run sgb-ng-nest-universal:serve-ssr",
-    "serve:ssr": "node dist/sgb-ng-nest-universal/server/main.js",
-    "build:ssr": "ng build --prod && ng run sgb-ng-nest-universal:server:production",
-    "prerender": "ng run sgb-ng-nest-universal:prerender",
-    "prebuild:ssr": "ngcc"
+    "clean": "rm -rf dist",
+    "prebuild:ssr": "ngcc",
+    "local:ui": "ng build --watch",
+    "local:nest": "ng run sgb-ng-nest-universal:server --watch",
+    "localbuild:ssr": "ng build && ng run sgb-ng-nest-universal:server",
+    "localserve:ssr": "nodemon dist/sgb-ng-nest-universal/server/main.js",
+    "prodbuild:ssr": "ng build --prod && ng run sgb-ng-nest-universal:server:production",
+    "prodserve:ssr": "node dist/sgb-ng-nest-universal/server/main.js",
+    "prerender": "ng run sgb-ng-nest-universal:prerender"
   },
   "private": true,
   "dependencies": {
@@ -48,9 +53,9 @@
     "@angular/compiler-cli": "~9.1.9",
     "@nguniversal/builders": "^9.1.1",
     "@types/express": "^4.17.0",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -59,9 +64,14 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
+    "nodemon": "^2.0.4",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
+  },
+  "browser": {
+    "fs": false,
+    "path": false
   }
 }

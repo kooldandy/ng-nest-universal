@@ -12,12 +12,11 @@ const ENV_FILE_PATH = './.env';
   imports: [
     AngularUniversalModule.forRoot({
       bootstrap: AppServerModule,
-      viewsPath: join(process.cwd(), 'dist/sgb-ng-nest-universal/browser')
+      viewsPath: join(process.cwd(), 'dist/sgb-ng-nest-universal/browser'),
     }),
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: '.env'
-      //envFilePath: join(process.cwd(), '/server/.env')
     }),
   ],
   controllers: [AppController],

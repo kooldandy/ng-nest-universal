@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  private url = `http://localhost:58067/api/`;
+  private url = `http://localhost:3000/api/`;
   title = 'shibu';
   public data = '';
   constructor(

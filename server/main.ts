@@ -12,14 +12,14 @@ async function bootstrap() {
 
   app.enableCors();
 
-  console.log("path.join() : ", path.join(__dirname, '../../../server/.env'));
+  console.log("path.join() : ", path.join(__dirname, ''));
 
   console.log("cwd: ", path.join(process.cwd(), ''));
 
   const configService = app.get(ConfigService);
   console.log(configService);
-  const port = configService.get('PORT');
-  console.log(configService.get('PORT'), port, process.env.PORT);
+  const port = process.env.PORT;
+  console.log( port, process.env.PORT);
 
   await app.listen(port, () => {
     Logger.log('Listening at http://localhost:' + port + '/' + globalPrefix);
