@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ng-nest-universal'`, () => {
+  it(`should have as title 'sgb-ng-nest-universal'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ng-nest-universal');
+    expect(app.title).toEqual('sgb-ng-nest-universal');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ng-nest-universal app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('sgb-ng-nest-universal app is running!');
   });
 });

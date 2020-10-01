@@ -1,0 +1,35 @@
+.header {
+  background: #f0da50;
+  border-radius: 5px;
+  margin: 1em;
+  padding: 1em;
+
+  .navbar-brand{
+      display: flex;
+
+      .navbar-item {
+        
+        img{
+            height: 100px;
+        }
+      }
+
+      .navbar-brand-text{
+        font-size: 4rem;
+        font-weight: 300;
+        font-style: italic;
+
+        p{
+            margin: 36px;
+        }
+      }
+  }
+
+  
+
+  .navbar-tagline {
+    margin: 0 57px;
+    font-size: 1rem;
+    font-family: Roboto;
+  }
+}

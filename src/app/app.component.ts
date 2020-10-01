@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-sgb-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'ng-nest-universal';
+export class AppComponent implements OnInit {
+
+  constructor(
+
+  ) { }
+
+
+  ngOnInit() {
+
+  }
+
 }
