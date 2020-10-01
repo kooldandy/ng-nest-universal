@@ -20,17 +20,21 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run prodbuild:ssr --if-present
-    #- run: npm test
+        
+    - name: npm install, build
+      run: |
+          npm install
+          npm run prodbuild:ssr --if-present
+            
     - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: dist-without-markdown
-          path: |
+      uses: actions/upload-artifact@v2-preview
+      with:
+        name: dist-artifact
+        path: |
             dist
             !dist/**/*.md
