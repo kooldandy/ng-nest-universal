@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
@@ -64,7 +63,7 @@ import {OverlayModule} from '@angular/cdk/overlay';
     MatIconModule,
     MatInputModule,
 
-
+    MatListModule,
     A11yModule,
     ClipboardModule,
     CdkStepperModule,
@@ -109,4 +108,4 @@ import {OverlayModule} from '@angular/cdk/overlay';
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
   ]
 })
-export class SharedModule { }
+export class SharedMaterialModule { }

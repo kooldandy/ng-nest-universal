@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { BlogRoutingModule } from './blog-routing.module';
 import { HomeComponent } from './home/home.component';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
 import { CardComponent } from './card/card.component';
 import { HeaderComponent } from './header/header.component';
 import { ViewComponent } from './view/view.component';
+import { SharedMaterialModule } from '../shared/sharedMaterial.module';
 
 
 @NgModule({
@@ -15,8 +14,7 @@ import { ViewComponent } from './view/view.component';
   imports: [
     CommonModule,
     BlogRoutingModule,
-    MatCardModule,
-    MatButtonModule,
+    SharedMaterialModule
   ]
 })
 export class BlogModule { }

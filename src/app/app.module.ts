@@ -7,9 +7,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgxsModule } from '@ngxs/store';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
 import { environment } from 'src/environments/environment';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,16 +16,19 @@ import { environment } from 'src/environments/environment';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatCardModule,
-    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgxsModule.forRoot([], {
       developmentMode: !environment.production
-    })
+    }),
+    AppRoutingModule,
   ],
-  providers: [],
+  entryComponents: [
+  ],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
