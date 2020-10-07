@@ -1,6 +1,19 @@
 {
+  "author": "Saurabh Ghosh",
+  "license": "",
   "name": "sgb-ng-nest-universal",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "homepage": "https://kooldandy.github.io/ng-nest-universal/",
+  "bugs": {
+    "url": "https://github.com/kooldandy/ng-nest-universal/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kooldandy/ng-nest-universal.git"
+  },
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "ng": "ng",
     "start": "prodserve:ssr",
