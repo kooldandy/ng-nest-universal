@@ -3,21 +3,22 @@ import { AppModule } from './app.module';
 import { Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import * as path from 'path';
+import { NestExpressApplication } from '@nestjs/platform-express';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
 
   app.enableCors();
 
-  console.log("path.join() : ", path.join(__dirname, ''));
+  //console.log("path.join() : ", path.join(__dirname, ''));
 
-  console.log("cwd: ", path.join(process.cwd(), ''));
+  //console.log("cwd: ", path.join(process.cwd(), ''));
 
-  const configService = app.get(ConfigService);
-  console.log(configService);
+  //const configService = app.get(ConfigService);
+  //console.log(configService);
   const port = process.env.PORT;
   console.log( port, process.env.PORT);
 
